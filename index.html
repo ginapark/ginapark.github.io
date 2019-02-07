@@ -4,49 +4,116 @@
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Montserrat">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-        
+        <!-- JavaScript -->
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+        <script src="assets/js/script.js"></script>
+
+        <!-- Social media icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <title>Gina's Website</title>
         <meta name ="Gina's website" content="Gina Park's personal website">
-        <!--<link rel="shortcut icon" href="assets/images/shiba_favicon.png"> -->
 
     </head>
+
     <body>
         <div class = "nav-bar" class = "responsive">
-            <a href="index.html" class="logo">
+            <a href="ginapark.github.io" class="logo" id="nav-logo">
                 <b>GINA<br>
                 PARK</b></a>
             <ul class="main-nav">
-                <li>
-                    <a href="index.html">Home</a>
+                <li id="nav-home">
+                    Home
                 </li>
-                <li>
-                    <a href="#">About</a>
+                <li id="nav-about">
+                    About
                 </li>
-                <li>
+                <li id="nav-resume">
                     <a href="assets/resume/Gina Park - Resume.pdf">Experience</a>
                 </li>
-                <li>
-                    <a href="pages/interests.html">Interests</a>
+                <li id="nav-interests">
+                    Interests
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li id="nav-contact">
+                    <a href="mailto:park.jina@husky.neu.edu">
+                    Contact</a>
                 </li>
-            </ul>
+            </ul>  
         </div>
 
-        <div class = "intro-image">
+
+        <div class = "intro">
             <div class = "intro-text">
-                    Hi, I'm Gina 
+                    Gina Park 
                 <br>
-                <div class = "intro-body">
-                    Seattle based. <br>
-                    Microsoft. <br>
-                    Master's student.
+                <span class="intro-typeit"></span>
+            </div>
+        </div>
+
+        
+        <div class="about-me">
+            <br>
+            <div class="about-container" id="container-picture">
+                <div class="about-body" id="contains-picture">
+                </div>
+                <div class="about-body" id="contains-text">
+                    <div class="about-header">Hi there, <br> I'm Gina
+                        <div class="about-text">
+                            <b>MS Computer Science </b> @ Northeastern University <br>
+                            <b>BA Economics </b> @ University of California, Berkeley <br>
+                            <b> Finance </b> @ Microsoft <br>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="about-me">
-            
+
+        <div class="interests">
+            <div class="interests-header">
+                <div id="interests-title"> Interests </div> 
+                <div id="interests-body">
+                    Desserts &amp; Travel </div> 
+                <span class="interests-locations"></span>
+            </div>
+    
+            <div class="images">
+                <div class="images-row">            
+                    <div class="images-column">
+                        <img src="assets/images/interest4.jpg" alt="Bremen, Germany" style="width:100%">
+                    </div>
+                    <div class="images-column">
+                        <img src="assets/images/interest3.jpg" alt="Amsterdam" style="width:100%">
+                    </div>
+                    <div class="images-column">
+                        <img src="assets/images/seattleskyline1.jpg" alt="Seattle Skyline" style="width:100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
+
+
+<!--<div class="interests">
+        <div class="interests-header">
+            <div class="interests-title"> Interests <br> </div> 
+            <span class="interests-locations"></span>
+        </div>
+
+        <div class="images">
+            <div class="images-row">            
+                <div class="images-column">
+                    <img src="../assets/images/interest4.jpg" alt="Bremen, Germany" style="width:100%">
+                </div>
+                <div class="images-column">
+                    <img src="../assets/images/interest3.jpg" alt="Amsterdam" style="width:100%">
+                </div>
+                <div class="images-column">
+                    <img src="../assets/images/interest2.HEIC" alt="SoCal - Beach" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </div> -->
