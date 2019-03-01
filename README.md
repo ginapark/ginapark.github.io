@@ -1,1 +1,1 @@
-ginapark.github.io (https://ginapark.github.io/)
+[ginapark.github.io](https://ginapark.github.io/)
