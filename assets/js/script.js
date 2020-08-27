@@ -1,99 +1,73 @@
 $(document).ready(function() {
 
+    // String of the navigation tabs
     var navigation = {};
     var interests = '.interests'
     var about = '.about-me'
     var contact = '.contact'
     var intro = '.intro'
+    var experience = '.experience'
+    
     navigation[interests] = false;
     navigation[about] = false;
     navigation[contact] = false;
+    navigation[experience] = false;
     navigation[intro] = true;
+
+    // Mapping of navigation string to toggle elements
+    var mapping = {};
+    mapping[interests] = $(".interests");
+    mapping[about] = $(".about-me");
+    mapping[contact] = $(".contact");
+    mapping[experience] = $(".experience");
+    mapping[intro] = $(".intro");
 
     $(".interests").toggle();
     $(".about-me").toggle();
     $(".contact").toggle();
+    $(".experience").toggle();
     
     $('.intro-typeit').typeIt({
         strings: [
             "Seattle based",
-            "Microsoft", 
-            "Master's Student",
+            "Software Engineer",
         ],
         speed: 130,
         breakLines: true,
         loop: false,
         waitUntilVisible: true
-        });
-    $('.interests-locations').typeIt({
-        strings: [
-            "San Francisco",
-            "Los Angeles",
-            "Seattle",
-            "San Francisco",
-            "Boston",
-            "Philadelphia",
-            "Washington D.C.",
-            "Prague, Czech Republic",
-            "Edinburgh, Scotland",
-            "London, England",
-            "Amsterdam, Netherlands",
-            "Milan, Italy",
-            "Copenhangen, Denmark"
+    });
 
-        ],
-        speed: 150,
-        breakLines: false,
-        loop: true,
-        waitUntilVisible: true
-        });;
-
-    $("#nav-home").on("click", function(){
+    function toggleElements(elementOn) {
         for (var item in navigation) {
-            if (navigation[item] == true) {
-                $(item).toggle();
-                $(intro).toggle();
-                navigation[item] = false;
-                navigation[intro] = true;
-                break;   
+            if (item == elementOn && navigation[item] == false) {
+                mapping[item].toggle();
+                navigation[item] = true
+            } else if (item != elementOn && navigation[item] == true) {
+                mapping[item].toggle();
+                navigation[item] = false
             }
         }
+    };
+
+    $("#nav-home").on("click", function(){
+        toggleElements(intro);
     });
 
     $("#nav-interests").on("click", function(){
-        for (var item in navigation) {
-            if (navigation[item] == true) {
-                $(item).toggle();
-                $(interests).toggle();
-                navigation[item] = false;
-                navigation[interests] = true;
-                break;   
-            }
-        }
+        toggleElements(interests);
     });
 
     $("#nav-about").on("click", function(){
-        for (var item in navigation) {
-            if (navigation[item] == true) {
-                $(item).toggle();
-                $(about).toggle();
-                navigation[item] = false;
-                navigation[about] = true;
-                break;   
-            }
-        }
+        toggleElements(about);
     });
 
     $("#nav-contact").on("click", function(){
-        for (var item in navigation) {
-            if (navigation[item] == true) {
-                $(item).toggle();
-                $(contact).toggle();
-                navigation[item] = false;
-                navigation[contact] = true;
-                break;   
-            }
-        }
+        toggleElements(contact);
+    });
+
+    $("#nav-experience").on("click", function(){
+        toggleElements(experience);
     });
 });
 
